@@ -1,35 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Fighter</title>
+    <title>سياسة الخصوصية | Privacy Policy</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
-        h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; text-align: right; }
+        h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; color: #007bff; }
         h2 { margin-top: 30px; color: #555; }
+        .en { text-align: left; direction: ltr; display: block; margin-top: 5px; color: #666; }
     </style>
 </head>
 <body>
-    <h1>Privacy Policy</h1>
-    <p>Last updated: July 2026</p>
-    
-    <h2>1. Introduction</h2>
-    <p>Welcome to <strong>Fighter</strong>. We are committed to protecting your privacy. This Privacy Policy explains how our mobile application handles user information.</p>
-    
-    <h2>2. Information Collection and Use</h2>
-    <p>Our application is designed for users aged 13 and older. We do not collect, store, or share any personal identity information from our users. Any data generated within the app is kept locally on your device or securely managed for individual student usage.</p>
-    
-    <h2>3. Advertising</h2>
-    <p>We use Google AdMob to serve advertisements within the app. These third-party services may collect data used to identify your device to provide personalized ads.</p>
-    
-    <h2>4. Data Security</h2>
-    <p>We value your trust in providing us your information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable.</p>
 
-    <h2>5. Account Deletion Request</h2>
-    <p>To delete your account and all associated data, please contact us at <strong>workcode86@gmail.com</strong> with your registered phone number or email. We will process your deletion request and wipe your data from our database within 48 hours.</p>
-    
-    <h2>6. Contact Us</h2>
-    <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at: <strong>workcode86@gmail.com</strong>.</p>
+    <h1>سياسة الخصوصية <span class="en">Privacy Policy</span></h1>
+    <p>مرحباً بكم في صفحة سياسة الخصوصية الخاصة بتطبيقنا: <strong id="appName" style="color: #007bff; font-size: 1.2em;">التطبيق</strong></p>
+    <p class="en">Welcome to the Privacy Policy page for our application: <strong id="appNameEn" style="color: #007bff;">Application</strong></p>
+
+    <hr>
+
+    <h2>1. جمع المعلومات واستخدامها <span class="en">Information Collection and Use</span></h2>
+    <p>نحن لا نقوم بجمع أو تخزين أي بيانات شخصية خاصة بك بشكل مباشر. إذا كان التطبيق يستخدم خدمات طرف ثالث (مثل إعلانات Google AdMob أو تحليلات Firebase)، فقد تقوم هذه الخدمات بجمع معلومات لمعرفات الإعلانات لتحسين الخدمة.</p>
+    <p class="en">We do not directly collect or store any of your personal data. If the app uses third-party services (like Google AdMob or Firebase Analytics), they may collect information for advertising IDs to improve the service.</p>
+
+    <h2>2. أمن البيانات <span class="en">Data Security</span></h2>
+    <p>نحن حريصون على حماية بياناتك ونستخدم الوسائل التجارية المقبولة لحمايتها، ولكن تذكر أنه لا توجد طريقة نقل عبر الإنترنت آمنة بنسبة 100%.</p>
+    <p class="en">We care about protecting your data and use commercially acceptable means to protect it, but remember that no method of transmission over the internet is 100% secure.</p>
+
+    <h2>3. الاتصال بنا <span class="en">Contact Us</span></h2>
+    <p>إذا كان لديك أي أسئلة أو استفسارات حول سياسة الخصوصية، يمكنك التواصل معنا عبر البريد الإلكتروني الأتي:</p>
+    <p class="en">If you have any questions about this Privacy Policy, you can contact us at:</p>
+    <p><strong>workcode86@gmail.com</strong></p>
+
+    <script>
+        // كود سحري بيقرا اسم التطبيق من رابط الموقع تلقائياً
+        const urlParams = new URLSearchParams(window.location.search);
+        const appName = urlParams.get('app');
+        
+        if (appName) {
+            document.getElementById('appName').innerText = appName;
+            document.getElementById('appNameEn').innerText = appName;
+            document.title = "Privacy Policy - " + appName;
+        }
+    </script>
 </body>
 </html>
